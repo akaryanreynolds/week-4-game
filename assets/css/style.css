@@ -1,0 +1,40 @@
+body{
+	background-image: url("../images/spiration dark.png");
+	color:yellow;
+}
+
+h1 {
+	font-size: 50px;
+	margin:20px 0px;
+}
+
+#instructions {
+background-color: yellow;
+color: black;
+max-width: 50%;
+margin:20px 0px;
+}
+
+.crystals{
+	width: 150px;
+	height: 150px;
+	margin: 20px 0px;
+}
+
+#scoreBoard{
+	max-width: 50%
+
+}
+
+#randomNumber{
+	background-color:red;
+	/*float:left;*/
+	margin-bottom:10px;
+	max-width: 50%
+}
+
+#gameScore{
+	background-color:orange;
+	/*float:left;*/
+	max-width: 50%;
+}
