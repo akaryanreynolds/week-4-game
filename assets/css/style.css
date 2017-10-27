@@ -4,8 +4,9 @@ body{
 }
 
 #container{
-	padding-left: 25%;
-	max-width: 630px;
+	margin: auto;
+	/*width: 34%;*/
+	max-width: 615px;
 	/*justify-content: center;*/
 }
 
@@ -26,7 +27,7 @@ padding: 10px;
 }
 
 #crystalOptions{
-	padding-left: 10px;
+	/*padding-left: 10px;*/
 }
 
 .crystals{
