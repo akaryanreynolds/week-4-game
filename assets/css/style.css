@@ -1,5 +1,6 @@
 body{
 	background-image: url("../images/spiration dark.png");
+	font-family: 'Schoolbell', cursive;
 }
 
 #container{
@@ -21,7 +22,7 @@ background-color: lime;
 color: black;
 max-width: 100%;
 margin:20px 0px;
-padding: 10px 0px;
+padding: 10px;
 }
 
 #crystalOptions{
@@ -46,16 +47,17 @@ padding: 10px 0px;
 	/*max-width: 50%*/
 }
 
-#gameScore{
+#gameWins, #gameLosses{
 	text-align:center;
-	padding: 10px 0px;
+	/*padding: 10px 0px;*/
 	background-color:lime;
 	color:black;
-	margin-bottom: 10px;
+	/*margin-bottom: 10px;*/
 	/*max-width: 150px;*/
 }
 
 #playersScore{
+	margin-top: 10px;
 	text-align: center;
 	color:lime;
 }
