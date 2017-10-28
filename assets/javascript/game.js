@@ -58,8 +58,8 @@ function compNumber(){
 	// }
 
 	function resetWin(){
+		alert("Amazing!! You matched the Computer!!" + "\nYou had " + playersTotal + "\nPush OK to play again!")
 		playersTotal = 0;
-		alert("Amazing!! You matched the Computer!!" + "\nPush OK to play again!")
 		compNumber();
 		// crystalValues();
 		blueCrystal();
@@ -69,8 +69,8 @@ function compNumber(){
 	}
 
 	function resetLoose(){
+		alert("You LOOOOOOOOSE to high!!" + "\nYou had " + playersTotal + "\nPush OK to play again!")
 		playersTotal = 0;
-		alert("You LOOOOOOOOSE to high!!" + "\nPush OK to play again!")
 		compNumber();
 		// crystalValues();
 		blueCrystal();
@@ -86,7 +86,6 @@ $(document).ready(function() {
 		// Need to add the blueValue to playersScore
 			console.log(crystalArray);
 			playersTotal += parseInt(crystalArray[0]);
-			$("#playersScore").text("Your current total is: " + playersTotal);
 	        // alert("Blue clicked!");
 			if (playersTotal == randomNumber){
 				wins++
@@ -96,19 +95,20 @@ $(document).ready(function() {
 			}
 
 			if (playersTotal > randomNumber){
+				resetLoose();
 				losses++
 				console.log("add: " + losses + "losses");
 				$('#gameLosses').text('Losses: ' + losses);
-				resetLoose();
 			}
+
+			$("#playersScore").text("Your current total is: " + playersTotal);
+
 	      });
 
 	$("#clear").on("click", function() {
 			console.log(crystalArray);
 			playersTotal += parseInt(crystalArray[1]);
-			$("#playersScore").text("Your current total is: " + playersTotal);
 	        // alert("Clear clicked!");
-
 	        if (playersTotal == randomNumber){
 				wins++
 				console.log("add: " + wins + "wins");
@@ -122,12 +122,14 @@ $(document).ready(function() {
 				$('#gameLosses').text('Losses: ' + losses);
 				resetLoose();
 			}
+
+			$("#playersScore").text("Your current total is: " + playersTotal);
+
 	      });
 
 	$("#pink").on("click", function() {
 			console.log(crystalArray);
 			playersTotal += parseInt(crystalArray[2]);
-			$("#playersScore").text("Your current total is: " + playersTotal);
 	        // alert("Pink clicked!");
 
 	        if (playersTotal == randomNumber){
@@ -143,12 +145,14 @@ $(document).ready(function() {
 				$('#gameLosses').text('Losses: ' + losses);
 				resetLoose();
 			}
+
+			$("#playersScore").text("Your current total is: " + playersTotal);
+
 	      });
 
 	$("#green").on("click", function() {
 			console.log(crystalArray);
 			playersTotal += parseInt(crystalArray[3]);
-			$("#playersScore").text("Your current total is: " + playersTotal);
 	        // alert("Green clicked!");
 
 		    if (playersTotal == randomNumber){
@@ -164,6 +168,9 @@ $(document).ready(function() {
 				$('#gameLosses').text('Losses: ' + losses);
 				resetLoose();
 			}
+
+			$("#playersScore").text("Your current total is: " + playersTotal);
+
 	      });
 
 	$("#playersScore").text("Your current total is: " + playersTotal);
